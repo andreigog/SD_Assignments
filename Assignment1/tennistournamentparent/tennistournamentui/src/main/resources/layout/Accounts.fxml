@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="514.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.student.ui.HomeController">
+   <children>
+      <VBox prefHeight="651.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ToolBar>
+              <items>
+                <Button mnemonicParsing="false" text="Back" />
+                  <Button mnemonicParsing="false" text="Save User" />
+                  <Button mnemonicParsing="false" text="Delete User" />
+                  <Button mnemonicParsing="false" text="Create User" />
+              </items>
+            </ToolBar>
+            <HBox prefHeight="88.0" prefWidth="942.0">
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+               <children>
+                  <ComboBox prefHeight="31.0" prefWidth="241.0" promptText="Select User">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="230.0" prefWidth="942.0">
+               <children>
+                  <GridPane prefHeight="207.0" prefWidth="373.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Username" />
+                        <Label text="Password" GridPane.rowIndex="1" />
+                        <Label text="Holder" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </GridPane>
+                  <VBox prefHeight="230.0" prefWidth="337.0">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
