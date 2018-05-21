@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tennistournamentbusiness/tennistournamentbusiness.iml" filepath="$PROJECT_DIR$/tennistournamentbusiness/tennistournamentbusiness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tennistournamentdao/tennistournamentdao.iml" filepath="$PROJECT_DIR$/tennistournamentdao/tennistournamentdao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tennistournamentparent.iml" filepath="$PROJECT_DIR$/tennistournamentparent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tennistournamentui/tennistournamentui.iml" filepath="$PROJECT_DIR$/tennistournamentui/tennistournamentui.iml" />
+    </modules>
+  </component>
+</project>
