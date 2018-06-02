@@ -17,3 +17,8 @@ th, td {
     padding: 15px;
     text-align: left;
 }
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; text-align: right}
+input { display: table-cell; }

@@ -11,20 +11,25 @@ import javax.persistence.Id;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private Long id;
     private String username;
     private String password;
-    private int age;
-    private String hobby;
 
+    public User() {
+    }
 
-    public String getId() {
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public Long getId() {
         return this.id;
     }
 
 
     public void setId(
-            final String id) {
+            final Long id) {
         this.id = id;
     }
 
@@ -47,28 +52,6 @@ public class User {
     public void setPassword(
             final String password) {
         this.password = password;
-    }
-
-
-    public int getAge() {
-        return this.age;
-    }
-
-
-    public void setAge(
-            final int age) {
-        this.age = age;
-    }
-
-
-    public String getHobby() {
-        return this.hobby;
-    }
-
-
-    public void setHobby(
-            final String hobby) {
-        this.hobby = hobby;
     }
 
 }

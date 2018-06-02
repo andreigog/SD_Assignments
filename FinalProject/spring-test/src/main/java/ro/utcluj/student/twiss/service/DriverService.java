@@ -15,11 +15,7 @@ public class DriverService {
 	@Autowired
 	private DriverRepository driverRepository;
 
-	public Driver addDriver() {
-		final Driver driver = new Driver();
-		driver.setFirstName("Andrei");
-		driver.setLastName("Gog");
-		driver.setLicenseId("CV234234");
+	public Driver addDriver(Driver driver) {
 		return this.driverRepository.save(driver);
 	}
 

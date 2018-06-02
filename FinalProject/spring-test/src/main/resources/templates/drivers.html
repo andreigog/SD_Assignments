@@ -29,9 +29,8 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/home">Home</a></li>
-                <li><a href="/about">About</a></li>
                 <li class="active"><a href="#">Drivers</a></li>
-                <li><a href="/home">Passengers</a></li>
+                <li><a href="/passengers">Passengers</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </div>
@@ -45,8 +44,9 @@
         <table>
             <thead>
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
                 <th>Driver's License</th>
             </tr>
             </thead>
@@ -56,7 +56,10 @@
                     <td th:text="${driver.id}"></td>
                 </h2>
                 <h2>
-                    <td th:text="${driver.firstName}"></td>
+                    <td th:text="${driver.name}"></td>
+                </h2>
+                <h2>
+                    <td th:text="${driver.age}"></td>
                 </h2>
                 <h2>
                     <td th:text="${driver.licenseId}"></td>
@@ -65,12 +68,30 @@
             </tbody>
         </table>
     </div>
-    <div>
+
+
+    <p>
         <h1>New Driver</h1>
-        <form action="#" th:action="@{/drivers}" method="post">
-            <h2>Name: <input type="text"/></h2>
-            <h2>Age: <input type="number"/></h2>
-            <h2><input type="submit" value="Add"/> <input type="reset" value="Reset"/></h2>
+        <form action="#" th:action="@{/drivers}" th:object="${driver}" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" th:field="*{age}" /></td>
+                    <td th:if="${#fields.hasErrors('age')}" th:error="*{age}">Age Error</td>
+                </tr>
+                <tr>
+                    <td>License ID:</td>
+                    <td><input type="text" th:field="*{licenseId}" /></td>
+                    <td th:if="${#fields.hasErrors('licenseId')}" th:error="*{licenseId}">License Id Error</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
         </form>
     </div>
 

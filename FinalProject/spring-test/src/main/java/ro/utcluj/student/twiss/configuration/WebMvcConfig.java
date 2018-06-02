@@ -15,7 +15,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
             final InterceptorRegistry registry) {
         registry.addInterceptor(new SecurityInterceptor())//
                 .addPathPatterns("/**")//
-                .excludePathPatterns("/login-page", "/login", "/error", "/logout");
+                .excludePathPatterns("/login-page", "/login","/error", "/logout");
     }
+
 
 }

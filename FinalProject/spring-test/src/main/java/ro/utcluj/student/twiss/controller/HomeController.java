@@ -14,12 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class HomeController {
 
-	private final String message = "Hello World";
 
 	@RequestMapping("/home")
 	public String welcome(
 		final Map<String, Object> model) {
-		model.put("message", this.message);
 		return "home";
 	}
 	@RequestMapping(value = "/logout")
